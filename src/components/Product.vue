@@ -22,6 +22,8 @@
         </span>
       </a>
     </div>
+    <p v-if="isHalfEmpty">Glass is half empty</p>
+    <p v-else>Glass is half full</p>
   </div>
 </template>
 
@@ -29,7 +31,8 @@
 export default {
   data() {
     return {
-      product: 'beer'
+      product: 'beer',
+      isHalfEmpty: true,
     }
   }
 }
