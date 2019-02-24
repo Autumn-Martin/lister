@@ -4,18 +4,21 @@
     <HelloWorld msg="Welcome to Lister!"/>
     <h2>Here's a List:</h2>
     <List />
+    <Product />
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import List from './components/List.vue'
+import Product from './components/Product.vue'
 
 export default {
   name: 'app',
   components: {
     HelloWorld,
-    List
+    List,
+    Product
   }
 }
 </script>
