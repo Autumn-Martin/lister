@@ -1,5 +1,5 @@
 <template>
-  <div class="list">
+  <div id="list">
     <div class="holder">
       <ul>
         <li v-for="(data, index) in list" :key='index'>
@@ -31,11 +31,6 @@ export default {
 }
 </script>
 <style scoped>
-
-  .holder {
-    background: #fff;
-  }
-
   ul {
     margin: 0;
     padding: 0;
@@ -52,7 +47,7 @@ export default {
   }
 
   p {
-    text-align:center;
+    text-align: center;
     padding: 30px 0;
     color: gray;
   }
@@ -61,4 +56,12 @@ export default {
     box-shadow: 0px 0px 40px lightgray;
   }
 
+  .holder {
+    background: #fff;
+  }
+
+  #list {
+    text-align: left;
+    margin: 0% 25% 0% 25%;
+  }
 </style>

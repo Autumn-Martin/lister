@@ -1,11 +1,15 @@
 <template>
+<body>
   <div id="app">
+    <header class="nav-bar"></header>
+
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Lister!"/>
     <h2>Here's a List:</h2>
     <List />
     <Product />
   </div>
+</body>
 </template>
 
 <script>
@@ -29,16 +33,27 @@ export default {
 body {
   background-color: #EEEEEE;
   font-family: 'Montserrat', sans-serif;
-  display: grid;
-  grid-template-rows: auto;
   justify-items: center;
   align-items: center;
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
+
 body, html {
   margin: 0;
   height: 100%;
 }
-#app {
-    width: 50%;
+
+h2 {
+  text-align: center;
+}
+
+.nav-bar {
+  background: linear-gradient(-90deg, #84CF6A, #16C0B0);
+  height: 60px;
+  padding-top: 0;
+  margin-bottom: 15px;
+  width: 100%;
 }
 </style>
