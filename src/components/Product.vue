@@ -1,16 +1,16 @@
 
 <template>
-  <div class="product">
-    <h2>Buy me a {{ product }}</h2>
+  <div>
+  <h2 style="display: block">Buy me a {{ product }}</h2>
 
-    <div class="product-image">
-      <img src="../../public/seth-weisfeld-510833-unsplash.jpg" >
-    </div>
+  <div class="product">
     <div>
+      <img style="display: block" src="../../public/seth-weisfeld-510833-unsplash.jpg" >
       <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
          href="https://unsplash.com/@jackharner?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
          target="_blank" rel="noopener noreferrer"
          title="Download free do whatever you want high-resolution photos from Jack Harner">
+
          <span style="display:inline-block;padding:2px 3px">
            <svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32">
              <title>unsplash-logo</title>
@@ -24,6 +24,7 @@
     </div>
     <p v-if="isHalfEmpty">Glass is half empty</p>
     <p v-else>Glass is half full</p>
+  </div>
   </div>
 </template>
 
@@ -57,7 +58,8 @@ button {
 img {
   border: 1px solid #d8d8d8;
   width: 70%;
-  margin: 40px;
+  margin: 0;
+  padding: 0;
   box-shadow: 0px .5px 1px #d8d8d8;
 }
 
@@ -85,7 +87,6 @@ textarea {
 
 .cart {
   margin-right: 25px;
-  float: right;
   border: 1px solid #d8d8d8;
   padding: 5px 20px;
 }
@@ -95,13 +96,11 @@ textarea {
 }
 
 .product {
-  display: flex;
-  flex-flow: wrap;
   padding: 1rem;
 }
 
 .product-image {
-  width: 80%;
+  height: 2rem;
   border-radius: 5px;
 }
 
