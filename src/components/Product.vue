@@ -1,30 +1,36 @@
 
 <template>
   <div>
-  <h2 style="display: block">Buy me a {{ product }}</h2>
+	  <h2 style="display: block">Buy me a {{ product }}</h2>
 
-  <div class="product">
-    <div>
-      <img style="display: block" src="../../public/seth-weisfeld-510833-unsplash.jpg" >
-      <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
-         href="https://unsplash.com/@jackharner?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
-         target="_blank" rel="noopener noreferrer"
-         title="Download free do whatever you want high-resolution photos from Jack Harner">
+	  <div class="product">-
+	    <div>
+	      <img style="display: block" src="../../public/seth-weisfeld-510833-unsplash.jpg" >
+	      <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+	         href="https://unsplash.com/@jackharner?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+	         target="_blank" rel="noopener noreferrer"
+	         title="Download free do whatever you want high-resolution photos from Jack Harner">
 
-         <span style="display:inline-block;padding:2px 3px">
-           <svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32">
-             <title>unsplash-logo</title>
-             <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
-           </svg>
-        </span>
-        <span style="display:inline-block;padding:2px 3px">
-          Jack Harner
-        </span>
-      </a>
-    </div>
-    <p v-if="isHalfEmpty">Glass is half empty</p>
-    <p v-else>Glass is half full</p>
-  </div>
+	         <span style="display:inline-block;padding:2px 3px">
+	           <svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32">
+	             <title>unsplash-logo</title>
+	             <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+	           </svg>
+	        </span>
+	        <span style="display:inline-block;padding:2px 3px">
+	          Jack Harner
+	        </span>
+	      </a>
+	    </div>
+			<div>
+		    <p v-if="isHalfEmpty">Glass is half empty</p>
+		    <p v-else>Glass is half full</p>
+				<p>All the beers:</p>
+				<ul>
+					<li v-for="variant in variants" :key="variant.id">{{ variant.name }}</li>
+				</ul>
+			</div>
+	  </div>
   </div>
 </template>
 
@@ -34,6 +40,26 @@ export default {
     return {
       product: 'beer',
       isHalfEmpty: true,
+      variants: [
+        { id: 1,
+					name: "IPA" },
+        { id: 2,
+					name: "Brown Ale" },
+        { id: 3,
+					name: "Stout" },
+        { id: 4,
+					name: "Red Ale" },
+        { id: 5,
+					name: "Brown" },
+        { id: 6,
+					name: "Dunkle" },
+        { id: 7,
+					name: "Oktoberfest" },
+        { id: 8,
+					name: "Hefeveizen" },
+        { id: 9,
+					name: "Porter" }
+      ]
     }
   }
 }
